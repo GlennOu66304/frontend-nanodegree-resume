@@ -26,7 +26,10 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: blue;
+  /* rgb color setting: 
+  color: rgb(255,255,255);
+  */
+  color: rgb(245, 174, 35);
   line-height: 48px;
   display: inline;
 }
@@ -34,7 +37,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: red;
+  color: gray;
   line-height: 29px;
   padding: 10px;
 }
@@ -42,7 +45,7 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: green;
+  color: rgb(0, 0, 0);
   line-height: 22px;
 }
 
@@ -57,8 +60,10 @@ h2,
 h3,
 h4,
 h5 {
-  padding: 10px 5%;
-
+  padding: 10px;
+  padding-left: 76px;
+  padding-right: 76px;
+ 
 }
 
 
@@ -86,7 +91,7 @@ p {
 }
 
 a {
-  color: #1199c3;
+  color: #1199C3;
   text-decoration: none;
   margin-top: 10px;
   display: block;
@@ -103,7 +108,9 @@ a {
   color: #f5ae23;
   display: none;
 }
-
+.onlineCourse-entry{
+  padding-left: 79px;
+}
 .orange {
   background-color: #f5ae23;
 }
@@ -149,7 +156,7 @@ a {
 }
 
 .center-content {
-  padding: 2.5% 5%;
+  padding:  5%;
 }
 
 ul {
