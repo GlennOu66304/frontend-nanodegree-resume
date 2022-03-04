@@ -1,3 +1,4 @@
+/* global css properties */
 body,
 div,
 ul,
@@ -63,9 +64,7 @@ h5 {
   padding: 10px;
   padding-left: 76px;
   padding-right: 76px;
- 
 }
-
 
 .date-text {
   font-style: italic;
@@ -81,7 +80,6 @@ h5 {
   color: #999;
   line-height: 16px;
   float: right;
-
 }
 
 p {
@@ -91,26 +89,12 @@ p {
 }
 
 a {
-  color: #1199C3;
+  color: #1199c3;
   text-decoration: none;
   margin-top: 10px;
   display: block;
 }
 
-.welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #f3f3f3;
-  line-height: 28px;
-}
-
-#skills-h3 {
-  color: #f5ae23;
-  display: none;
-}
-.onlineCourse-entry{
-  padding-left: 79px;
-}
 .orange {
   background-color: #f5ae23;
 }
@@ -156,18 +140,11 @@ a {
 }
 
 .center-content {
-  padding:  5%;
+  padding: 5%;
 }
 
 ul {
   list-style-type: none;
-}
-
-.biopic {
-  float: left;
-  padding: 10px;
-  width: 200px;
-  display: none;
 }
 
 img {
@@ -178,10 +155,47 @@ span {
   padding: 5px;
 }
 
+/* bio css */
+.welcome-message {
+  font-style: italic;
+  font-size: 18px;
+  color: #f3f3f3;
+  line-height: 28px;
+}
+
+#skills-h3 {
+  color: #f5ae23;
+  display: none;
+}
+
+.biopic {
+  float: left;
+  padding: 10px;
+  width: 200px;
+  display: none;
+}
+
+/* education and onlineCourse css*/
+.onlineCourse-entry {
+  padding-left: 79px;
+}
+em {
+  font-style: italic;
+  color: #999;
+}
+br {
+  color: gray;
+}
+
+/* map and  footer  */
 #lets-connect {
   text-align: center;
 }
-
+button {
+  background-color: rgb(253, 173, 0);
+  font-weight: bold;
+  color: #fff;
+}
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {
@@ -190,7 +204,7 @@ span {
   }
 }
 
-@media only screen and (max-width:900px) {
+@media only screen and (max-width: 900px) {
   .biopic {
     width: 175px;
   }
