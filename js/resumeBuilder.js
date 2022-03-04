@@ -3,7 +3,7 @@ var bio = {
 "name": "Glenn Ou",
 "role": "Full Stack Developer",
 "welcomeMessage": "I'm currently working as a Full Stack Developer in the Beijing China. I love solving problems and providing solutions that save people time and money and help their day to day lives. Thanks for stopping by!",
-"biopic": "images/fry.jpg",
+"biopic": "images/Logo.png",
 
 "contacts":
 {
@@ -47,7 +47,7 @@ var projects = {
 "dates": "December 2016 - December 2017 ",
 "description": "Interface design of application that takes a college graduate student's income and payout data to help the user identify their spending patterns, monitor the rate at which they are spending their income and encourage them to save.",
 "images": [
-"images/fry.jpg"
+"images/Logo.png"
 ]
 },
 {
@@ -55,7 +55,7 @@ var projects = {
 "dates": "July 2017 - August 2017",
 "description": "Using HTML, CSS, JavaScript, Json and jQuery to build an electronic resume.",
 "images": [
-"images/fry.jpg"
+"images/Logo.png"
 ]
 }
 ]
