@@ -1,0 +1,25 @@
+body {
+	background: #F2F2F2;
+	font: 10px Verdana;
+}
+
+a {
+	text-decoration: none;
+}
+
+p, span {
+	line-height: 20px;
+}
+
+#header, #featured, #content, #footer {
+	overflow: hidden;
+}
+
+.container {
+	margin: 0 auto;
+	width: 1024px;
+}
+
+.clear {
+	clear: both;
+}
