@@ -125,7 +125,7 @@
 
         <!-- Exposure Videos -->
         <li>
-          <img src="style/images/service_preview_1.jpg"style="height:100px; width:230px" alt="placeholder" />
+          <img src="style/images/service_preview_1.jpg" style="height:100px; width:230px" alt="placeholder" />
           <h4>Exposure Videos</h4>
           <p>Praesent imperdiet nulla at tortor. Phasellus non lectus eget massa rhoncus consequat. Donec lectus ligula,
             posuere vel, semper a, posuere in, orci. Praesent imperdiet nulla at tortor. Phasellus non lectus eget massa
@@ -195,11 +195,17 @@
   <script src="js/Nivo-Slider.min.js.js"></script>
 
 
-  <!-- <script src="js/helper.js"></script>
 
-
-  <script src="js/resumeBuilder.js"></script> -->
-
+  <script type="text/javascript">
+    $(window).load(function () {
+      // Slider
+      $('#slider .slides').nivoSlider({
+        effect: 'random',
+        directionNav: false,
+        controlNav: false
+      });
+    });
+  </script>
 
 
 

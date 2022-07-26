@@ -1,3 +1,30 @@
+
+body {
+	background: #F2F2F2;
+	font: 10px Verdana;
+}
+
+a {
+	text-decoration: none;
+}
+
+p, span {
+	line-height: 20px;
+}
+
+#header, #featured, #content, #footer {
+	overflow: hidden;
+}
+
+.container {
+	margin: 0 auto;
+	width: 1024px;
+}
+
+.clear {
+	clear: both;
+}
+
 #header {
   background: #171717;
   border-bottom: 2px solid #252525;
@@ -194,8 +221,13 @@
 	margin: 0;
 }
 
-#footer {
+/* #footer {
 	background: #171717 url('layout/footer.png') no-repeat center top;
+	height: 250px;
+} */
+
+#footer {
+	background: #171717  no-repeat center top;
 	height: 250px;
 }
 
