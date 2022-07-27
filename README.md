@@ -16,3 +16,25 @@ https://dev.to/bkanhu/auto-deployment-of-website-with-github-and-hostinger-563p
 
 
 
+## Zero SSL install
+
+## 1.How to Install Zero SSL on Shared Hosting Using SSL For Free
+
+https://www.hostinger.com/tutorials/ssl/how-to-install-free-ssl-from-lets-encypt-on-shared-hosting
+
+
+
+2.Add the custom ssl into the hostinger
+
+https://support.hostinger.com/en/articles/1583785-how-to-install-a-custom-ssl
+
+
+
+3.Installing SSL Certificate on Hostinger
+
+https://help.zerossl.com/hc/en-us/articles/360060119413
+
+
+
+
+
