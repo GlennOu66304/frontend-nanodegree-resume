@@ -58,9 +58,7 @@ h3,
 h4,
 h5 {
   padding: 10px 5%;
-
 }
-
 
 .date-text {
   font-style: italic;
@@ -76,7 +74,6 @@ h5 {
   color: #999;
   line-height: 16px;
   float: right;
-
 }
 
 p {
@@ -169,6 +166,7 @@ img {
 
 span {
   padding: 5px;
+  color: white;
 }
 
 #lets-connect {
@@ -183,7 +181,7 @@ span {
   }
 }
 
-@media only screen and (max-width:900px) {
+@media only screen and (max-width: 900px) {
   .biopic {
     width: 175px;
   }
