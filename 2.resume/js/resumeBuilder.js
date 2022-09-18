@@ -18,28 +18,20 @@ var bio = {
 var education = {
   schools: [
     {
-      name: "XDF",
-      location: "Beijing,China",
-      degree: "English Spoken Leval 4",
-      majors: ["English Spoken"],
-      dates: "2017",
-      url: "https://www.gwu.edu",
-    },
-    {
-      name: "Beijing Waishi schools",
-      location: "Beijing, China",
-      degree: "BA",
-      majors: ["Coffee Advance"],
-      dates: "2016",
-      url: "http://www.yit.edu.cn/",
+      name: "Guangdong Open University",
+      location: "Guangzhou,China",
+      degree: "College",
+      majors: ["e-commerce"],
+      dates: "December 2017 -- Janauary 2021",
+      url: "http://www.gdrtvu.edu.cn/",
     },
   ],
   onlineCourses: [
     {
       title: "Front End Web Developer",
       school: "Udacity",
-      dates: "2017",
-      url: "http://cn.udacity.com/course/front-end-web-developer-nanodegree--nd001-cn-basic",
+      dates: "December 2017 -- Janauary 2018",
+      url: "https://www.udacity.com/",
     },
   ],
 };
@@ -49,7 +41,7 @@ var work = {
     {
       employer: "GlennTechLab",
       title: "Founder&CTO",
-      dates: "April 2022 - Now",
+      dates: "April 2022 -- Now",
       description:
         "Managing the complete software development process from conception to deployment",
 
@@ -58,7 +50,7 @@ var work = {
     {
       employer: "Upwork",
       title: "Freelance Web developer",
-      dates: "April 2017-April 2022",
+      dates: "April 2017 -- April 2022",
       description:
         "Working with clients to develop the overall look and design of a website",
       location: "Beijing China",
