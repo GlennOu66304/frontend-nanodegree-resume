@@ -8,7 +8,7 @@ var bio = {
     email: "2738328919@qq.com",
     github: "https://github.com/Glenou",
     location: "Washington, D.C.",
-	twitter:"@glennou66304"
+    twitter: "@glennou66304",
   },
   skills: ["HTML", "CSS", "JavaScript", "jQuery", "Git", "Gulp", "Bootstrap"],
   welcomeMessage: "This is it!",
@@ -66,7 +66,7 @@ var work = {
 };
 
 var projects = {
-  projects: [
+  workDemo: [
     {
       title: "Alipay",
       dates: "December 2016",
@@ -162,35 +162,55 @@ work.display = function () {
 work.display();
 
 // project content
-projects.display = function () {
-  for (var i = 0; i < projects.projects.length; i++) {
+function projectHtmlData() {
+  for (item in projects.workDemo) {
+    // insert a project contaner div
     $("#projects").append(HTMLprojectStart);
+
     var formattedTitle = HTMLprojectTitle.replace(
       "%data%",
-      projects.projects[i].title
+      projects.workDemo[item].title
     );
+
     var formattedDates = HTMLprojectDates.replace(
       "%data%",
-      projects.projects[i].dates
+      projects.workDemo[item].dates
     );
+
     var formattedDescription = HTMLprojectDescription.replace(
       "%data%",
-      projects.projects[i].description
+      projects.workDemo[item].description
     );
-    projects.projects[i].images.forEach(function (imgUrl) {
-      $(".project-entry:last").append(
-        HTMLprojectImage.replace("%data%", imgUrl)
-      );
-    });
+
+    var imgsInArray = projects.workDemo[item].images;
+    var formattedImgs = [];
+    // console.log(formattedimgs)
+    for (item in imgsInArray) {
+      var formattedimg = HTMLprojectImage.replace("%data%", imgsInArray[item]);
+      formattedImgs.push(formattedimg);
+      // console.log(formattedimg);
+      // console.log(item);
+    }
+
+    // console.log(
+    //   formattedTitle,
+    //   formattedDates,
+    //   formattedDescription,
+    //   formattedImgs
+    // );
+
     $(".project-entry:last").append(
       formattedTitle,
       formattedDates,
       formattedDescription
     );
+    $(".project-entry:last").append(formattedImgs);
+    // console.log(formattedTitle, formattedDates, formattedDescription);
   }
-};
+}
 
-projects.display();
+projectHtmlData();
+// projects.display();
 
 // education
 education.display = function () {

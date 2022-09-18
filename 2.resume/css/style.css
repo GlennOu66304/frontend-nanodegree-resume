@@ -1,10 +1,6 @@
 body,
-div,
-ul,
 li,
-p,
 h1,
-h2,
 h3,
 h4,
 h5,
@@ -12,6 +8,8 @@ h6 {
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
+  background-color: #000000;
+  
 }
 
 .clear-fix {
@@ -34,7 +32,6 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #0c1017;
   line-height: 29px;
   padding: 10px;
 }
@@ -82,7 +79,7 @@ p {
 }
 
 a {
-  color: #1199c3;
+  color: white;
   text-decoration: none;
   margin-top: 10px;
   display: block;
@@ -96,16 +93,8 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: white;
   display: none;
-}
-
-.orange {
-  background-color: #f5ae23;
-}
-
-.orange-text {
-  color: #f5ae23;
 }
 
 .white-text {
@@ -119,13 +108,7 @@ a {
   clear: both;
 }
 
-.dark-gray {
-  background-color: #4a4a4a;
-}
-
-/* TODO: Replace with image later */
 #header {
-  background-color: #484848;
 }
 
 .flex-box {
@@ -171,6 +154,43 @@ span {
 #lets-connect {
   text-align: center;
 }
+
+/* Header */
+
+/* Bio */
+
+/* Werk Experience */
+#workExperience {
+  background-color: #000000;
+}
+.work-title {
+  color: white;
+}
+p {
+  color: white;
+}
+/* Project*/
+#projects{
+  background-color: #000000;
+  color: white;
+}
+/* Education */
+
+#education{
+  background-color: #000000;
+  color: white;
+}
+.education-title{
+
+}
+.lets-connect {
+  background-color: black;
+}
+.connect {
+  color: white;
+}
+
+/* Footer */
 
 /* Media queries to handle various device widths */
 

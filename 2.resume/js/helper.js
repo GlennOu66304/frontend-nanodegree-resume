@@ -61,13 +61,9 @@ $(document).ready(function () {
   });
 });
 
-
-
-
 var clickLocations = [];
 
-
-// logs the latitude and lontidute 
+// logs the latitude and lontidute
 function logClicks(x, y) {
   clickLocations.push({
     x: x,
@@ -77,7 +73,6 @@ function logClicks(x, y) {
 }
 
 $(document).click(function (loc) {});
-
 
 // dispklay the map
 var map;
