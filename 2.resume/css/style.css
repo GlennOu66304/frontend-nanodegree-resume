@@ -1,7 +1,6 @@
 body,
 li,
 h1,
-h3,
 h4,
 h5,
 h6 {
@@ -49,7 +48,6 @@ h4 {
 }
 
 h2,
-h3,
 h4,
 h5 {
   padding: 10px 5%;
@@ -190,6 +188,10 @@ p {
   color: white;
 }
 .education-title {
+}
+.online-class{
+  padding:0px;
+  margin-top:15px;
 }
 .map-title {
   color: white;
