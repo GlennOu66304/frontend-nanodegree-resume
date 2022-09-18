@@ -1,17 +1,17 @@
 // source of json data
 
 var bio = {
-  name: "Glen Ou",
-  role: "Web Developer",
+  name: "Glene Ou",
+  role: "FullStack Web Developer",
   contacts: {
-    mobile: "+17607336789",
-    email: "2738328919@qq.com",
+    mobile: "+1 7607336789",
+    email: "glennou2@gmail.com",
     github: "https://github.com/GlennOu66304",
     location: "Washington, D.C.",
     twitter: "@glennou66304",
   },
   skills: ["HTML", "CSS", "JavaScript", "jQuery", "Git", "Gulp", "Bootstrap"],
-  welcomeMessage: "Welcome To My Profle",
+  welcomeMessage: "Thanks For Visiting My Profle",
   biopic: "images/profile-photo.jpg",
 };
 
