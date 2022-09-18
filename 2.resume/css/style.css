@@ -9,7 +9,6 @@ h6 {
   margin: 0;
   font-family: "Roboto", sans-serif;
   background-color: #000000;
-  
 }
 
 .clear-fix {
@@ -126,7 +125,10 @@ a {
   flex-wrap: nowrap;
   padding: 10px;
 }
-
+#skills {
+  padding: 0;
+  margin-top: 0px;
+}
 .center-content {
   padding: 2.5% 5%;
 }
@@ -145,7 +147,11 @@ ul {
 img {
   padding: 10px;
 }
-
+.projectImage {
+  width: 387px;
+  height: 315px;
+  border-radius: 20px;
+}
 span {
   padding: 5px;
   color: white;
@@ -158,7 +164,10 @@ span {
 /* Header */
 
 /* Bio */
-
+.biopic {
+  border-radius: 50%;
+  padding-top: 0px;
+}
 /* Werk Experience */
 #workExperience {
   background-color: #000000;
@@ -170,18 +179,20 @@ p {
   color: white;
 }
 /* Project*/
-#projects{
+#projects {
   background-color: #000000;
   color: white;
 }
 /* Education */
 
-#education{
+#education {
   background-color: #000000;
   color: white;
 }
-.education-title{
-
+.education-title {
+}
+.map-title {
+  color: white;
 }
 .lets-connect {
   background-color: black;
@@ -220,14 +231,8 @@ p {
 
 #map {
   display: block;
-  height: 100%;
+  height: 500px;
   margin: 0 5%;
-}
-
-#mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
 }
 
 @media only screen and (min-width: 750px) {

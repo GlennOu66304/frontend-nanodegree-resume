@@ -4,15 +4,15 @@ var bio = {
   name: "Glen Ou",
   role: "Web Developer",
   contacts: {
-    mobile: "18513763652",
+    mobile: "+17607336789",
     email: "2738328919@qq.com",
-    github: "https://github.com/Glenou",
+    github: "https://github.com/GlennOu66304",
     location: "Washington, D.C.",
     twitter: "@glennou66304",
   },
   skills: ["HTML", "CSS", "JavaScript", "jQuery", "Git", "Gulp", "Bootstrap"],
-  welcomeMessage: "This is it!",
-  biopic: "images/fry.jpg",
+  welcomeMessage: "Welcome To My Profle",
+  biopic: "images/profile-photo.jpg",
 };
 
 var education = {
@@ -47,20 +47,21 @@ var education = {
 var work = {
   jobs: [
     {
-      employer:
-        "Yiyun Technology Service and Consulting / IT Consulting / China (Remote)",
-      title: "Web Development Intern",
-      dates: "April 2016 - July 2016",
-      description: "Develop web pages using HTML5 technologies",
-      location: "shandong",
+      employer: "GlennTechLab",
+      title: "Founder&CTO",
+      dates: "April 2022 - Now",
+      description:
+        "Managing the complete software development process from conception to deployment",
+
+      location: "Beijing China",
     },
     {
-      employer: "DC Bilingual Public Charter School",
-      title: "Volunteer",
-      dates: "April 2017",
+      employer: "Upwork",
+      title: "Freelance Web developer",
+      dates: "April 2017-April 2022",
       description:
-        "Leading Chinese Culture Club among students who are interested in Chinese culture",
-      location: "hebei",
+        "Working with clients to develop the overall look and design of a website",
+      location: "Beijing China",
     },
   ],
 };
@@ -68,18 +69,17 @@ var work = {
 var projects = {
   workDemo: [
     {
-      title: "Alipay",
-      dates: "December 2016",
-      description:
-        "Interface design of application that takes a college graduate student's income and payout data to help the user identify their spending patterns, monitor the rate at which they are spending their income and encourage them to save.",
-      images: ["images/fry.jpg", "images/fry.jpg"],
+      title: "Welcome to the DJ Party",
+      dates: "December 2016- February 2017",
+      description: "Welcome to the DJ Party Find the hotest Dj event",
+      images: ["images/dj-events.png"],
     },
     {
-      title: "Electronic resume",
-      dates: "July 2017",
+      title: "mixiufourm",
+      dates: "July 2017 - Septermber 2017",
       description:
-        "Using HTML, CSS, JavaScript, Json and jQuery to build an electronic resume.",
-      images: ["images/fry.jpg", "images/fry.jpg"],
+        "a place where all developer can chat and share their idea, recent worked on side project",
+      images: ["images/mixiufourm.png"],
     },
   ],
 };
@@ -121,9 +121,15 @@ bio.display = function () {
   }
   if (bio.skills) {
     $("#header").append(HTMLskillsStart);
+    // console.log(bio.skills)
+    var formattedSkills = [];
+    for (item in bio.skills) {
+      var formattedSkill = HTMLskills.replace("%data%", bio.skills[item]);
+      formattedSkills.push(formattedSkill);
+    }
 
-    var formattedSkill = HTMLskills.replace("%data%", bio.skills);
-    $("#skills").append(formattedSkill);
+    // console.log(formattedSkills)
+    $("#skills").append(formattedSkills);
   }
 };
 
@@ -150,6 +156,7 @@ work.display = function () {
       "%data%",
       work.jobs[i].description
     );
+
     $(".work-entry:last").append(
       formattedEmployerTitle,
       formattedLocation,

@@ -35,24 +35,8 @@
     </div>
 
     <!-- map section -->
-    <div id="mapDiv">
-      <h2>Where I've Lived and Worked</h2>
-      <script>
-        function initMap() {
-          var uluru = { lat: -25.363, lng: 131.044 };
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 4,
-            center: uluru
-          });
-          var marker = new google.maps.Marker({
-            position: uluru,
-            map: map
-          });
-        }
-      </script>
-      <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8rtlvg5thByQ1V1gf5It6fFvxTpAxP-c&callback=initMap">
-        </script>
+    <h2 class="map-title">Where I've Lived and Worked</h2>
+    <div id="map">
     </div>
 
     <!-- footer section -->
@@ -62,6 +46,12 @@
       </ul>
     </div>
   </div>
+  <!-- TypeError: Cannot read property 'PlacesService' of undefined
+  https://stackoverflow.com/questions/59935014/typeerror-cannot-read-property-placesservice-of-undefined
+  -->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8rtlvg5thByQ1V1gf5It6fFvxTpAxP-c&libraries=places&callback=initializeMap">
+    </script>
   <script src="js/jQuery.js"></script>
   <script src="js/helper.js"></script>
   <script src="js/resumeBuilder.js"></script>

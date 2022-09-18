@@ -4,17 +4,17 @@ var HTMLheaderRole = "<span>%data%</span><hr>";
 var HTMLcontactGeneric =
   '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
 var HTMLmobile =
-  '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
+  '<li class="flex-item"><span class="orange-text">TEL</span><span class="white-text">%data%</span></li>';
 var HTMLemail =
-  '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
+  '<li class="flex-item"><span class="orange-text">Email</span><span class="white-text">%data%</span></li>';
 var HTMLtwitter =
-  '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
+  '<li class="flex-item"><span class="orange-text">Twitter</span><span class="white-text">%data%</span></li>';
 var HTMLgithub =
-  '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
+  '<li class="flex-item"><span class="orange-text">Github</span><span class="white-text">%data%</span></li>';
 var HTMLblog =
-  '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
+  '<li class="flex-item"><span class="orange-text">Blog</span><span class="white-text">%data%</span></li>';
 var HTMLlocation =
-  '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+  '<li class="flex-item"><span class="orange-text">Location</span><span class="white-text">%data%</span></li>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
@@ -35,7 +35,7 @@ var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = "<p><br>%data%</p>";
-var HTMLprojectImage = '<img src="%data%">';
+var HTMLprojectImage = '<img class = "projectImage" src="%data%">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
@@ -69,7 +69,7 @@ function logClicks(x, y) {
     x: x,
     y: y,
   });
-  console.log("x location: " + x + "; y location: " + y);
+  // console.log("x location: " + x + "; y location: " + y);
 }
 
 $(document).click(function (loc) {});
@@ -85,7 +85,7 @@ function initializeMap() {
   };
 
   map = new google.maps.Map(document.querySelector("#map"), mapOptions);
-
+  // location array build
   function locationFinder() {
     var locations = [];
 
@@ -99,6 +99,7 @@ function initializeMap() {
       locations.push(job.location);
     });
 
+    // console.log(locations)
     return locations;
   }
 
@@ -109,20 +110,36 @@ function initializeMap() {
     var name = placeData.formatted_address; // name of the place from the place service
     var bounds = window.mapBounds; // current boundaries of the map window
 
+    // console.log(lat, lon, name);
     // marker is an object with additional data about the pin for a single location
     var marker = new google.maps.Marker({
       map: map,
       position: placeData.geometry.location,
       title: name,
     });
+    // console.log("marker is ", marker);
 
     var infoWindow = new google.maps.InfoWindow({
+      zoom: 10,
       content: name,
     });
-
+    // console.log(infoWindow)
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, "click", function () {
       // your code goes here!
+      infoWindow.setContent(marker.title);
+      infoWindow.open(map, marker);
+      // console.log(marker);
+
+      if (marker.getAnimation() != null) {
+        marker.setAnimation(null);
+      } else {
+        // marker shake logic here, it will shake 2 seconds
+        marker.setAnimation(google.maps.Animation.BOUNCE);
+        setTimeout(function () {
+          marker.setAnimation(null);
+        }, 2000);
+      }
     });
 
     // this is where the pin actually gets added to the map.
@@ -139,6 +156,7 @@ function initializeMap() {
   If so, it creates a new map marker for that location.
   */
   function callback(results, status) {
+    // console.log(results, status);
     if (status == google.maps.places.PlacesServiceStatus.OK) {
       createMapMarker(results[0]);
     }
@@ -152,14 +170,14 @@ function initializeMap() {
     // creates a Google place search service object. PlacesService does the work of
     // actually searching for location data.
     var service = new google.maps.places.PlacesService(map);
-
+    // console.log("service is ",service)
     // Iterates through the array of locations, creates a search object for each location
     locations.forEach(function (place) {
       // the search request object
       var request = {
         query: place,
       };
-
+      //  console.log("request is ", request)
       // Actually searches the Google Maps API for location data and runs the callback
       // function with the search results after each search.
       service.textSearch(request, callback);
